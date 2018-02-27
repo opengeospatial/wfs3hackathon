@@ -1,4 +1,4 @@
-# WFS 3.0 Hackathon Logistics
+# WFS 3.0 Hackathon - Logistics
 
 ## Travel
 
@@ -17,10 +17,10 @@ There are plenty of other hotels in town, some of which are convenient to the Ma
 
 ## Venue
 
-U.S. Geological Survey Fort Collins Science Center
-Powell Center
-2150 Centre Avenue
-Building C
+U.S. Geological Survey Fort Collins Science Center  
+Powell Center  
+2150 Centre Avenue  
+Building C  
 Fort Collins, CO 80526
 
 ## Meals
