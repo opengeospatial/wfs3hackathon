@@ -2,7 +2,9 @@
 
 This is an initial draft agenda for the Hackathon. The agenda will be adapted as necessary during the event.
 
-We plan to share the initial and final sessions - marked with `[Remote]` and with their scheduled start time - with remote participants using GoToMeeting. All times are in Mountain Standard Time (UTC -7h).
+We plan to share at least the initial and final sessions - marked with `[Remote]` and with their scheduled start time - with remote participants using GoToMeeting. However, we cannot guarantee if there will be remote web conferencing capabilities just yet. 
+
+All times are in Mountain Standard Time (UTC -7h).
 
 ---
 **Day 1, 09:00 - 18:00**
