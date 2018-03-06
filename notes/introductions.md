@@ -25,6 +25,6 @@ Looking forward to integrating further features of the spec, in particular those
 
 **Angelos Tzotsos**: Core pycsw developer and core GeoNode developer. Participated in OGC CSW 3.0 efforts with the first reference implementation. Interested in implementing WFS 3.0 for GeoNode and STAC for pycsw. Goal of this hackathon is to develop with the geopython community a common library to manage wfs3 objects which can then be used by any framework
 
-## Observers
+## Observers 
 
 (Observer) Scott Serich: OGC staff member, Testbed 14 Initiative Director: short-term goal is to use the momentum from the hackathon to accelerate the WFS 3.0 work in Testbed 14 and avoid as much duplication of effort as possible; long-term goal is to use lessons learned from this effort to inform future OGC Innovation Program initiatives that might adopt a similar "implementation-first" approach to advancing the OGC standards baseline.
