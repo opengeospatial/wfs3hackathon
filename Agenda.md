@@ -49,7 +49,8 @@ Identify topics to work on, for example:
 
 *Summary and plans for Day 2 (~15 min, Peter, Clemens, all)*
 
-*18:00 Drinks, Dinner*
+*18:00 Drinks, Dinner - Mainline, 125 South College*
+*your best bet for parking may be the Oak Street lot, just east of College*
 
 ---
 **Day 2, 09:00 - 17:15**
