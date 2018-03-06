@@ -1,0 +1,1299 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Liegenschaftskataster (NRW)",
+    "description": "Das Liegenschaftskataster wird in elektronischer Form im Amtlichen Liegenschaftskatasterinformationssystem (ALKIS) geführt. Der vorliegende Web Feature Service ermöglicht das gezielte Herunterladen von in ALKIS geführten Geo-Objekten auf Basis einer Suchanfrage (Direktzugriffs-Downloaddienst). Der Dienst stellt ausschließlich folgende Geo-Objekte beschränkt auf die wesentlichen Eigenschaften im Format eines vereinfachten Datenaustauschschemas bereit, das in dieser Produktspezifikation festgelegt ist: Flurstücke und Verwaltungseinheiten. Der Dienst ist konzipiert zur Nutzung in einfachen praxisgängigen GIS-Clients ohne komplexe Funktionalitäten.",
+    "contact": {
+      "name": "Geobasis NRW",
+      "url": "http://www.geobasis.nrw.de",
+      "email": "geobasis@bezreg-koeln.nrw.de",
+      "x-details": {
+        "individualName": "N.N.",
+        "phone": "+49(0)221-147-4994",
+        "facsimile": "+ 49(0)221-147-4874",
+        "deliveryPoint": "Muffendorfer Str. 19-21",
+        "city": "Bonn",
+        "administrativeArea": "Nordrhein-Westfalen",
+        "postalCode": "53177",
+        "country": "Deutschland",
+        "onlineResource": "http://www.geobasis.nrw.de",
+        "hoursOfService": "Montag bis Donnerstag 8:30 - 15:00"
+      }
+    },
+    "license": {
+      "name": "Es gelten keine Beschränkungen."
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://www.ldproxy.nrw.de/kataster"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Capabilities",
+      "description": "Essential characteristics of this API including information about the data."
+    },
+    {
+      "name": "Features",
+      "description": "Access to data (features)."
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Capabilities"
+        ],
+        "summary": "describe the feature collections in the dataset",
+        "operationId": "describeCollections",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/f"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The feature collections shared by this API.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/content"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/content"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api": {
+      "get": {
+        "tags": [
+          "Capabilities"
+        ],
+        "summary": "the API description - this document",
+        "operationId": "getApiDescription",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/f"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The formal documentation of this API according to the OpenAPI specification, version 3.0. I.e., this document.",
+            "content": {
+              "application/openapi+json;version=3.0": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/flurstueck": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "retrieve collection of features of type Flurstück",
+        "operationId": "getFlurstueckCollection",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/f"
+          },
+          {
+            "$ref": "#/components/parameters/startIndex"
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "$ref": "#/components/parameters/resultType"
+          },
+          {
+            "$ref": "#/components/parameters/bbox"
+          },
+          {
+            "name": "kreis",
+            "in": "query",
+            "description": "Filter the collection by kreis",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "flur",
+            "in": "query",
+            "description": "Filter the collection by flur",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gemeinde",
+            "in": "query",
+            "description": "Filter the collection by gemeinde",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "flurstnr",
+            "in": "query",
+            "description": "Filter the collection by flurstnr",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gemarkung",
+            "in": "query",
+            "description": "Filter the collection by gemarkung",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lagebeztxt",
+            "in": "query",
+            "description": "Filter the collection by lagebeztxt",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "regbezirk",
+            "in": "query",
+            "description": "Filter the collection by regbezirk",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gmdschl",
+            "in": "query",
+            "description": "Filter the collection by gmdschl",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Information about the feature collection plus the first features matching the selection parameters.",
+            "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureCollectionGeoJSON"
+                }
+              },
+              "application/gml+xml;version=3.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureCollectionGML"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/flurstueck/{id}": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "retrieve a Flurstück",
+        "operationId": "getFlurstueck",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          },
+          {
+            "$ref": "#/components/parameters/f"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A feature.",
+            "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/flurstueck"
+                }
+              },
+              "application/gml+xml;version=3.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureGML"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gebaeudebauwerk": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "retrieve collection of features of type Gebäude, Bauwerk",
+        "operationId": "getGebaeudeBauwerkCollection",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/f"
+          },
+          {
+            "$ref": "#/components/parameters/startIndex"
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "$ref": "#/components/parameters/resultType"
+          },
+          {
+            "$ref": "#/components/parameters/bbox"
+          },
+          {
+            "name": "funktion",
+            "in": "query",
+            "description": "Filter the collection by funktion",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gebnutzbez",
+            "in": "query",
+            "description": "Filter the collection by gebnutzbez",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Information about the feature collection plus the first features matching the selection parameters.",
+            "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureCollectionGeoJSON"
+                }
+              },
+              "application/gml+xml;version=3.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureCollectionGML"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gebaeudebauwerk/{id}": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "retrieve a Gebäude, Bauwerk",
+        "operationId": "getGebaeudeBauwerk",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          },
+          {
+            "$ref": "#/components/parameters/f"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A feature.",
+            "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/gebaeude"
+                }
+              },
+              "application/gml+xml;version=3.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureGML"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/verwaltungseinheit": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "retrieve collection of features of type Verwaltungseinheit",
+        "operationId": "getVerwaltungsEinheitCollection",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/f"
+          },
+          {
+            "$ref": "#/components/parameters/startIndex"
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "$ref": "#/components/parameters/resultType"
+          },
+          {
+            "$ref": "#/components/parameters/bbox"
+          },
+          {
+            "name": "ueboname",
+            "in": "query",
+            "description": "Filter the collection by ueboname",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "art",
+            "in": "query",
+            "description": "Filter the collection by art",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "schluessel",
+            "in": "query",
+            "description": "Filter the collection by schluessel",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Filter the collection by name",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uebobjekt",
+            "in": "query",
+            "description": "Filter the collection by uebobjekt",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Information about the feature collection plus the first features matching the selection parameters.",
+            "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureCollectionGeoJSON"
+                }
+              },
+              "application/gml+xml;version=3.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureCollectionGML"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/verwaltungseinheit/{id}": {
+      "get": {
+        "tags": [
+          "Features"
+        ],
+        "summary": "retrieve a Verwaltungseinheit",
+        "operationId": "getVerwaltungsEinheit",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          },
+          {
+            "$ref": "#/components/parameters/f"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A feature.",
+            "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/verwaltungseinheit"
+                }
+              },
+              "application/gml+xml;version=3.2": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureGML"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "exception": {
+        "required": [
+          "code"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "xml": {
+              "name": "code",
+              "attribute": true
+            }
+          },
+          "description": {
+            "type": "string",
+            "xml": {
+              "name": "description",
+              "namespace": "http://www.opengis.net/wfs/3.0",
+              "prefix": "wfs"
+            }
+          }
+        },
+        "xml": {
+          "name": "Exception",
+          "namespace": "http://www.opengis.net/wfs/3.0",
+          "prefix": "wfs"
+        }
+      },
+      "bbox": {
+        "required": [
+          "bbox"
+        ],
+        "type": "object",
+        "properties": {
+          "crs": {
+            "type": "string",
+            "enum": [
+              "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            ],
+            "default": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+          },
+          "bbox": {
+            "type": "array",
+            "description": "minimum longitude, minimum latitude, maximum longitude, maximum latitude",
+            "example": [
+              -180,
+              -90,
+              180,
+              90
+            ],
+            "items": {
+              "maximum": 180,
+              "minimum": -180,
+              "maxItems": 4,
+              "minItems": 4,
+              "type": "number"
+            }
+          }
+        }
+      },
+      "content": {
+        "required": [
+          "collections"
+        ],
+        "type": "object",
+        "properties": {
+          "collections": {
+            "type": "array",
+            "xml": {
+              "namespace": "http://www.opengis.net/wfs/3.0",
+              "prefix": "wfs"
+            },
+            "items": {
+              "$ref": "#/components/schemas/collectionInfo"
+            }
+          }
+        },
+        "xml": {
+          "name": "Collections",
+          "namespace": "http://www.opengis.net/wfs/3.0",
+          "prefix": "wfs"
+        }
+      },
+      "collectionInfo": {
+        "required": [
+          "links",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "address"
+          },
+          "title": {
+            "type": "string",
+            "example": "address"
+          },
+          "description": {
+            "type": "string",
+            "example": "An address."
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/link"
+            }
+          },
+          "extent": {
+            "$ref": "#/components/schemas/bbox"
+          },
+          "crs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "link": {
+        "required": [
+          "href"
+        ],
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "example": "http://data.example.com/buildings/123",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "rel": {
+            "type": "string",
+            "example": "prev",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "type": {
+            "type": "string",
+            "example": "application/gml+xml;version=3.2",
+            "xml": {
+              "attribute": true
+            }
+          },
+          "hreflang": {
+            "type": "string",
+            "example": "en",
+            "xml": {
+              "attribute": true
+            }
+          }
+        }
+      },
+      "featureCollectionGeoJSON": {
+        "required": [
+          "features"
+        ],
+        "type": "object",
+        "properties": {
+          "features": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/featureGeoJSON"
+            }
+          }
+        }
+      },
+      "featureGeoJSON": {
+        "required": [
+          "geometry",
+          "properties",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Feature"
+            ]
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/geometryGeoJSON"
+          },
+          "properties": {
+            "type": "object",
+            "nullable": true
+          },
+          "id": {}
+        }
+      },
+      "geometryGeoJSON": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Point",
+              "MultiPoint",
+              "LineString",
+              "MultiLineString",
+              "Polygon",
+              "MultiPolygon",
+              "GeometryCollection"
+            ]
+          }
+        }
+      },
+      "featureCollectionGML": {
+        "type": "object",
+        "properties": {
+          "features": {
+            "type": "array",
+            "items": {
+              "xml": {
+                "name": "featureMember",
+                "namespace": "http://www.opengis.net/wfs/3.0",
+                "prefix": "wfs"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/referenceXlink"
+                },
+                {
+                  "$ref": "#/components/schemas/featureGML"
+                }
+              ]
+            }
+          }
+        },
+        "xml": {
+          "name": "FeatureCollection",
+          "namespace": "http://www.opengis.net/wfs/3.0",
+          "prefix": "wfs"
+        }
+      },
+      "featureGML": {
+        "required": [
+          "gml:id"
+        ],
+        "type": "object",
+        "properties": {
+          "gml:id": {
+            "type": "string",
+            "xml": {
+              "namespace": "http://www.opengis.net/gml/3.2",
+              "prefix": "gml",
+              "attribute": true
+            }
+          }
+        },
+        "xml": {
+          "name": "AbstractFeature",
+          "namespace": "http://www.opengis.net/gml/3.2",
+          "prefix": "gml"
+        }
+      },
+      "referenceXlink": {
+        "required": [
+          "href"
+        ],
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "xml": {
+              "namespace": "http://www.w3.org/1999/xlink",
+              "prefix": "xlink",
+              "attribute": true
+            }
+          },
+          "title": {
+            "type": "string",
+            "xml": {
+              "namespace": "http://www.w3.org/1999/xlink",
+              "prefix": "xlink",
+              "attribute": true
+            }
+          }
+        }
+      },
+      "flurstueck": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "geometry",
+          "properties"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Feature"
+            ]
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/geometryGeoJSON"
+          },
+          "id": {
+            "type": "string"
+          },
+          "properties": {
+            "type": "object",
+            "properties": {
+              "aktualit": {
+                "type": "string",
+                "format": "date"
+              },
+              "flaeche": {
+                "type": "number"
+              },
+              "flstkennz": {
+                "type": "string"
+              },
+              "land": {
+                "type": "string"
+              },
+              "gemarkung": {
+                "type": "string"
+              },
+              "flur": {
+                "type": "string"
+              },
+              "flurstnr": {
+                "type": "string"
+              },
+              "gmdschl": {
+                "type": "string"
+              },
+              "regbezirk": {
+                "type": "string"
+              },
+              "kreis": {
+                "type": "string"
+              },
+              "gemeinde": {
+                "type": "string"
+              },
+              "lagebeztxt": {
+                "type": "string"
+              },
+              "tntxt": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "gebaeude": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "geometry",
+          "properties"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Feature"
+            ]
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/geometryGeoJSON"
+          },
+          "id": {
+            "type": "string"
+          },
+          "properties": {
+            "type": "object",
+            "properties": {
+              "aktualit": {
+                "type": "string",
+                "format": "date"
+              },
+              "gebnutzbez": {
+                "type": "string"
+              },
+              "funktion": {
+                "type": "string"
+              },
+              "anzahlgs": {
+                "type": "integer"
+              },
+              "lagebeztxt": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "verwaltungseinheit": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "geometry",
+          "properties"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Feature"
+            ]
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/geometryGeoJSON"
+          },
+          "id": {
+            "type": "string"
+          },
+          "properties": {
+            "type": "object",
+            "properties": {
+              "aktualit": {
+                "type": "string",
+                "format": "date"
+              },
+              "art": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "schluessel": {
+                "type": "string"
+              },
+              "uebobjekt": {
+                "type": "string"
+              },
+              "ueboname": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "f": {
+        "name": "f",
+        "in": "query",
+        "description": "The format of the response. If no value is provided, the standard http rules apply, i.e., the accept header shall be used to determine the format.\\\nPre-defined values are \"xml\", \"json\" and \"html\". The response to other  values is determined by the server.",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "json",
+            "xml",
+            "html"
+          ]
+        },
+        "example": "json"
+      },
+      "startIndex": {
+        "name": "startIndex",
+        "in": "query",
+        "description": "The optional startIndex parameter indicates the index within the result set from which the server shall begin presenting results in the response document. The first element has an index of 0.\\\nMinimum = 0.\\\nDefault = 0.",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "minimum": 0,
+          "type": "integer",
+          "default": 0
+        },
+        "example": 0
+      },
+      "count": {
+        "name": "count",
+        "in": "query",
+        "description": "The optional count parameter limits the number of items that are presented in the response document.\\\nOnly items are counted that are on the first level of the collection in the response document.  Nested objects contained within the explicitly requested items shall not be counted.\\\nMinimum = 1.\\\nMaximum = 10000.\\\nDefault = 10.",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "maximum": 10000,
+          "minimum": 1,
+          "type": "integer",
+          "default": 10
+        },
+        "example": 10
+      },
+      "bbox": {
+        "name": "bbox",
+        "in": "query",
+        "description": "Only features that have a geometry that intersects the bounding box are selected. The bounding box is provided as four numbers:\n \n* Lower corner, coordinate axis 1 (minimum longitude) * Lower corner, coordinate axis 2 (minimum latitude) * Upper corner, coordinate axis 1 (maximum longitude) * Upper corner, coordinate axis 2 (maximum latitude)",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "array",
+          "items": {
+            "maximum": 180,
+            "minimum": -180,
+            "maxItems": 4,
+            "minItems": 4,
+            "type": "number"
+          }
+        }
+      },
+      "resultType": {
+        "name": "resultType",
+        "in": "query",
+        "description": "This service will respond to a query in one of two ways (excluding an exception response). It may either generate a complete response document containing resources that satisfy the operation or it may simply generate an empty response container that indicates the count of the total number of resources that the operation would return. Which of these two responses is generated is determined by the value of the optional resultType parameter.\\\nThe allowed values for this parameter are \"results\" and \"hits\".\\\nIf the value of the resultType parameter is set to \"results\", the server will generate a complete response document containing resources that satisfy the operation.\\\nIf the value of the resultType attribute is set to \"hits\", the server will generate an empty response document containing no resource instances.\\\nDefault = \"results\".",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "hits",
+            "results"
+          ],
+          "default": "results"
+        },
+        "example": "results"
+      },
+      "id": {
+        "name": "id",
+        "in": "path",
+        "description": "The id of a feature",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
