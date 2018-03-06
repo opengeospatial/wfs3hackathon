@@ -15,6 +15,14 @@ Other servers (OpenAPI documents):
 ### [CubeWerx](http://www.cubewerx.com)
 * http://www.pvretano.com/cubewerx/cubeserv/default/wfs/3.0.0/foundation (still a bit rough tough!)
 
+### [go-wfs](https://github.com/go-spatial/go-wfs/)
+
+Golang server implementing core wfs3 w/ zero-config GeoPackage data source support & geojson encoding plus filtering.  Looking for other golang developers to fill it out & solidify it for production use.  Examples of good places to contribute:
+* Add support for PostGIS backends
+* Add html encoding support
+* Now that its starting to settle, tests would be good.
+* Clean up endpoints; filtering params may be better suited for PUT requests than GET params.
+* More detalied configuration to limit features / add metadata to data sources.
 
 ### (add your own implementations)
 
