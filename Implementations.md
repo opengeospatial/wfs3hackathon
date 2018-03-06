@@ -22,3 +22,9 @@ Other servers (OpenAPI documents):
 ### (add your own implementations)
 
 ...
+
+## Software
+
+### Servers
+* [go-wfs](https://github.com/go-spatial/go-wfs)
+* [pygeoapi](https://github.com/geopython/pygeoapi)
