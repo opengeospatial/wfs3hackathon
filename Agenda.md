@@ -7,7 +7,7 @@ We plan to share at least the initial and final sessions - marked with `[Remote]
 All times are in Mountain Standard Time (UTC -7h).
 
 ---
-**Day 1, 09:00 - 18:00**
+**Day 1, 09:00 - 17:15**
 
 *09:00 Introduction (15 min, Scott, Peter, Clemens, Chris)* `[Remote]`
 
@@ -25,10 +25,9 @@ All times are in Mountain Standard Time (UTC -7h).
 
 *Participant introduction (90 min, all)*
 
-* Background
-* What do want to get out of the event?
-* What do you like most about the current draft and process?
-* What are your biggest concerns about the current draft and process?
+* Brief background - What have you worked on that leads to you being here?
+* Thoughts & visions for WFS 3.0 spec - What do you want geospatial data on the web to do? 
+* This week - What are you planning to work on this week? What kind of help would you welcome from other participants?
 
 *Forming groups (15 min, Peter, Clemens, all)*
 
@@ -50,10 +49,10 @@ Identify topics to work on, for example:
 
 *Summary and plans for Day 2 (~15 min, Peter, Clemens, all)*
 
-*Drinks, Dinner*
+*18:00 Drinks, Dinner*
 
 ---
-**Day 2, 09:00 - 17:30**
+**Day 2, 09:00 - 17:15**
 
 *Working in groups (~180 min, all)*
 
@@ -70,6 +69,6 @@ Identify topics to work on, for example:
 
 *16:30 Conclusions for WFS 3.0 (30 min, Peter, Clemens, all)* `[Remote]`
 
-*17:00 Summary, follow-up and STAC outlook (30 min, Scott, Peter, Clemens, Chris)* `[Remote]`
+*17:00 Summary, follow-up and STAC outlook (15 min, Scott, Peter, Clemens, Chris)* `[Remote]`
 
 *Drinks, Dinner*
