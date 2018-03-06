@@ -6,6 +6,7 @@
 
 Server for the hackathon - landing page for several services:
 * http://wfs3hackathon.ldproxy.net/rest/services/
+* http://www.pvretano.com/cubewerx/cubeserv/default/wfs/3.0.0/foundation (still a bit rough tough!)
 * We can update these services and add additional datasets (as long as there is a public WFS 2.0 is available)
 
 Other servers (OpenAPI documents):
