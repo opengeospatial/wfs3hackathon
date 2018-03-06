@@ -24,3 +24,7 @@ Looking forward to integrating further features of the spec, in particular those
 **Samuel Okoroafor**: Senior GIS Developer @eHealthAfrica, implemented several WFS clients for different projects over the last 5 years. Topic of interest for this hackathon is to adapt existing clients to include WFS3.0 support, to do a test run for the WFS update feature and to provide support to any project implementing a WFS client.
 
 **Angelos Tzotsos**: Core pycsw developer and core GeoNode developer. Participated in OGC CSW 3.0 efforts with the first reference implementation. Interested in implementing WFS 3.0 for GeoNode and STAC for pycsw. Goal of this hackathon is to develop with the geopython community a common library to manage wfs3 objects which can then be used by any framework
+
+## Observers
+
+(Observer) Scott Serich: OGC staff member, Testbed 14 Initiative Director: short-term goal is to use the momentum from the hackathon to accelerate the WFS 3.0 work in Testbed 14 and avoid as much duplication of effort as possible; long-term goal is to use lessons learned from this effort to inform future OGC Innovation Program initiatives that might adopt a similar "implementation-first" approach to advancing the OGC standards baseline.
