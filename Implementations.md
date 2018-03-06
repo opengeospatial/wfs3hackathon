@@ -28,3 +28,4 @@ Other servers (OpenAPI documents):
 ### Servers
 * [go-wfs](https://github.com/go-spatial/go-wfs)
 * [pygeoapi](https://github.com/geopython/pygeoapi)
+* [ldproxy](http://interactive-instruments.github.io/ldproxy/)
