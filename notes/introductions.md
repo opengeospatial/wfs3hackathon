@@ -18,3 +18,5 @@ Looking forward to integrating further features of the spec, in particular those
  - 'Link' HTTP headers that link a feature URL to its collection/service description
  
 **Francesco Bartoli**: Core GeoNode developer, has 10+ years understanding of WxS OGC specs while supporting clients mostly with GeoServer installation. Interested to prototype an experimental WFS3 implementation with python in order to become a valid back-end alternative for vector layers in the future of GeoNode. Goal of this hackathon is to develop with the geopython community a common library to manage wfs3 objects which can then be used by any framework.
+
+**Andrea Aime**: Core GeoServer developer, participated in various OGC protocol implementations as well as CITE compliance efforts.  Topic of interest for this hackaton will be to develop an experimental WFS 3.0 server plugin for GeoServer.
