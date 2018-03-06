@@ -23,6 +23,7 @@ Golang server implementing core wfs3 w/ zero-config GeoPackage data source suppo
 * Now that its starting to settle, tests would be good.
 * Clean up endpoints; filtering params may be better suited for PUT requests than GET params.
 * More detalied configuration to limit features / add metadata to data sources.
+* Migrate OpenAPI spec from v2 -> v3
 
 ### (add your own implementations)
 
