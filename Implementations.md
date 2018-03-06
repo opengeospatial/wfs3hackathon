@@ -25,6 +25,9 @@ Golang server implementing core wfs3 w/ zero-config GeoPackage data source suppo
 * More detalied configuration to limit features / add metadata to data sources.
 * Migrate OpenAPI spec from v2 -> v3
 
+### [pygeoapi](https://github.com/geopython/pygeoapi)
+
+
 ### (add your own implementations)
 
 
