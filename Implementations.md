@@ -40,6 +40,11 @@ Running at:
 
 ## Clients
 
+### [GDAL/OGR](http://gdal.org)
+* [WFS 3.0 experimental driver documentation page](http://gdal.org/drv_wfs3.html)
+* [WFS 3.0 client code (C++)](https://github.com/OSGeo/gdal/blob/trunk/gdal/ogr/ogrsf_frmts/wfs/ogrwfs3driver.cpp)
+* [WFS 3.0 driver integration tests (Python)](https://github.com/OSGeo/gdal/blob/trunk/autotest/ogr/ogr_wfs3.py) (against a stubbed implemenation)
+
 ### (add your own implementations)
 
 ...
