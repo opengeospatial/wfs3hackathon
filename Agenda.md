@@ -51,7 +51,7 @@ Identify topics to work on, for example:
 
 *18:00 Drinks, Dinner - Mainline Ale House, 125 South College*
 
-*Your best bet for parking may be the Oak Street lot, just east of College - drive north on College past Mulberry and Olive and turn right on Oak into a parking lot behind the block.*
+Your best bet for parking may be the Oak Street lot, just east of College - drive north on College past Mulberry and Olive and turn right on Oak into a parking lot behind the block.
 
 ---
 **Day 2, 09:00 - 17:15**
@@ -75,4 +75,4 @@ Identify topics to work on, for example:
 
 *18:00 Drinks, Dinner - Coopersmiths Pub & Brewing, 5 Old Town Square*
 
-*If you are driving, take College north to Mountain; turn right on Mountain, and use the parking garage on the right in the next block. The restaurant is across Mountain from the porking lot, enter the building on the left (Pubside).*
+If you are driving, take College north to Mountain; turn right on Mountain, and use the parking garage on the right in the next block. The restaurant is across Mountain from the porking lot, enter the building on the left (Pubside).
