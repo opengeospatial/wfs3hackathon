@@ -75,4 +75,4 @@ Your best bet for parking may be the Oak Street lot, just east of College - driv
 
 *18:00 Drinks, Dinner - Coopersmiths Pub & Brewing, 5 Old Town Square*
 
-If you are driving, take College north to Mountain; turn right on Mountain, and use the parking garage on the right in the next block. The restaurant is across Mountain from the porking lot, enter the building on the left (Pubside).
+If you are driving, take College north to Mountain; turn right on Mountain, and use the parking garage on the right in the next block. The restaurant is across Mountain from the parking garage, enter the building on the left (Pubside).
