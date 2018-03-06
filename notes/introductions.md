@@ -22,3 +22,5 @@ Looking forward to integrating further features of the spec, in particular those
 **Andrea Aime**: Core GeoServer developer, participated in various OGC protocol implementations as well as CITE compliance efforts.  Topic of interest for this hackaton will be to develop an experimental WFS 3.0 server plugin for GeoServer.
 
 **Samuel Okoroafor**: Senior GIS Developer @eHealthAfrica, implemented several WFS clients for different projects over the last 5 years. Topic of interest for this hackathon is to adapt existing clients to include WFS3.0 support, to do a test run for the WFS update feature and to provide support to any project implementing a WFS client.
+
+**Angelos Tzotsos**: Core pycsw developer and core GeoNode developer. Participated in OGC CSW 3.0 efforts with the first reference implementation. Interested in implementing WFS 3.0 for GeoNode and STAC for pycsw. Goal of this hackathon is to develop with the geopython community a common library to manage wfs3 objects which can then be used by any framework
