@@ -25,7 +25,9 @@ Golang server implementing core wfs3 w/ zero-config GeoPackage data source suppo
 * More detalied configuration to limit features / add metadata to data sources.
 * Migrate OpenAPI spec from v2 -> v3
 
-Running at: http://192.168.111.154:9000 / http://wfs.jivanamara.net:9000
+Running at:
+* http://192.168.111.154:9000
+* http://wfs.jivanamara.net:9000
 
 
 ### [pygeoapi](https://github.com/geopython/pygeoapi)
