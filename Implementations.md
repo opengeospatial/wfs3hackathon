@@ -31,8 +31,8 @@ Golang server implementing core wfs3 w/ zero-config GeoPackage data source suppo
 * Migrate OpenAPI spec from v2 -> v3
 
 Running at:
-* http://192.168.111.154:80
-* http://wfs.jivanamara.net:9000
+* http://192.168.111.154:80 (JWP network)
+~~* http://wfs.jivanamara.net:9000~~ (out of date)
 * http://geo.kralidis.ca/go-wfs/
 
 
