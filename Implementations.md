@@ -28,6 +28,7 @@ Golang server implementing core wfs3 w/ zero-config GeoPackage data source suppo
 Running at:
 * http://192.168.111.154:80
 * http://wfs.jivanamara.net:9000
+* http://geo.kralidis.ca/go-wfs/
 
 
 ### [pygeoapi](https://github.com/geopython/pygeoapi)
