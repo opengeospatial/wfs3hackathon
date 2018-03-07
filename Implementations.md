@@ -32,7 +32,7 @@ Golang server implementing core wfs3 w/ zero-config GeoPackage data source suppo
 
 Running at:
 * http://192.168.111.154:80 (JWP network)
-~~* http://wfs.jivanamara.net:9000~~ (out of date)
+* ~~http://wfs.jivanamara.net:9000~~ (out of date)
 * http://geo.kralidis.ca/go-wfs/
 
 
