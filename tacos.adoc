@@ -1,12 +1,9 @@
 Tacos! Please enter your name and choice in the table below. Options are:
 
-*al pastor - pineapple marinated pork - Scott's favorite
-
-*asada - grilled beef
-
-*shrimp
-
-*vegetarian
+* al pastor - pineapple marinated pork - Scott's favorite
+* asada - grilled beef
+* shrimp
+* vegetarian
 
 [options="header"]
 |=============
