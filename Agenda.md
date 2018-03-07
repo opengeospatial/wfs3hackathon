@@ -76,3 +76,30 @@ Your best bet for parking may be the Oak Street lot, just east of College - driv
 *18:00 Drinks, Dinner - Coopersmiths Pub & Brewing, 5 Old Town Square*
 
 If you are driving, take College north to Mountain; turn right on Mountain, and use the parking garage on the right in the next block. The restaurant is across Mountain from the parking garage, enter the building on the left (Pubside).
+
+GoToMeeting details for Day 2:
+1. Please join my meeting, Wed Mar 7th 9:00 AM EST.
+
+https://www4.gotomeeting.com/join/603844877
+
+2. Use your microphone and speakers (VoIP) - a headset is recommended. Or, call in using your telephone.
+
+NZ: +64 9 282 9510
+IT: +39 0 230 57 81 80
+IE: +353 15 360 756
+NO: +47 21 93 37 37
+AU: +61 2 9091 7603
+DK: +45 32 72 03 69
+AT: +43 7 2081 5337
+CH: +41 225 4599 60
+SE: +46 853 527 818
+FR: +33 170 950 590
+US: +1 (312) 757-3119
+DE: +49 692 5736 7300
+GB: +44 330 221 0097
+ES: +34 932 75 1230
+NL: +31 207 941 375
+BE: +32 28 93 7002
+CA: +1 (647) 497-9373
+FI: +358 923 17 0556
+Access Code: 603-844-877  Audio PIN will be displayed upon joining the web session.
