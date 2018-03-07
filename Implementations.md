@@ -32,6 +32,8 @@ Running at:
 
 ### [pygeoapi](https://github.com/geopython/pygeoapi)
 
+Running at:
+* http://geo.kralidis.ca/pygeoapi/
 
 ### (add your own implementations)
 
