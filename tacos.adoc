@@ -1,4 +1,4 @@
-Tacos! Please enter your name and choice in the table below. Options are:
+Tacos! Please enter your name and choice in the table below. Four is a normal order. Options are:
 
 * al pastor - pineapple marinated pork - Scott's favorite
 * asada - grilled beef
