@@ -9,7 +9,7 @@ Tacos! Please enter your name and choice in the table below. Four is a normal or
 |=============
 |name|al pastor|asada|shrimp|veg
 |Scott S.|2|2||
-|Clemens|2|2||
+|pvretano|1|1|1|1
 |name||||
 |name||||
 |name||||
