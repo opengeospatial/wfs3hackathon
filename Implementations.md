@@ -8,10 +8,12 @@ Server for the hackathon - landing page for several services:
 * http://wfs3hackathon.ldproxy.net/rest/services/
 * We can update these services and add additional datasets (as long as there is a public WFS 2.0 is available)
 
-New capabilities added:
+New capabilities added / bugs fixed:
 * [added the /api/conformance endpoint](https://github.com/interactive-instruments/ldproxy/issues/99), example: http://wfs3hackathon.ldproxy.net/rest/services/test/api/conformance
 * [added links in the collection response in JSON, including XML schema links](https://github.com/interactive-instruments/ldproxy/issues/97), example: http://wfs3hackathon.ldproxy.net/rest/services/test/?f=json
 * [media type bugfixes](https://github.com/interactive-instruments/ldproxy/issues/100)
+* [activated CORS for every JSON endpoint](https://github.com/interactive-instruments/ldproxy/issues/103)
+* [moved minItems/maxItems in OpenAPI definition](https://github.com/interactive-instruments/ldproxy/issues/105)
 
 Other servers (OpenAPI documents):
 * https://www.ldproxy.nrw.de/kataster/api/
