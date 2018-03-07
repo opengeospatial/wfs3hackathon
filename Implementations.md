@@ -11,6 +11,7 @@ Server for the hackathon - landing page for several services:
 New capabilities added:
 * [added the /api/conformance endpoint](https://github.com/interactive-instruments/ldproxy/issues/99), example: http://wfs3hackathon.ldproxy.net/rest/services/test/api/conformance
 * [added links in the collection response in JSON, including XML schema links](https://github.com/interactive-instruments/ldproxy/issues/97), example: http://wfs3hackathon.ldproxy.net/rest/services/test/?f=json
+* [bugfix: support the OpenAPI media type](https://github.com/interactive-instruments/ldproxy/issues/100)
 
 Other servers (OpenAPI documents):
 * https://www.ldproxy.nrw.de/kataster/api/
