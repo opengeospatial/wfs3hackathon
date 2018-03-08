@@ -62,6 +62,8 @@ single feature outputs and attribute filtering.
 * [WFS 3.0 client code (C++)](https://github.com/OSGeo/gdal/blob/trunk/gdal/ogr/ogrsf_frmts/wfs/ogrwfs3driver.cpp)
 * [WFS 3.0 driver integration tests (Python)](https://github.com/OSGeo/gdal/blob/trunk/autotest/ogr/ogr_wfs3.py) (against a stubbed implemenation)
 
+### [an OpenLayers-based client](https://geekdenz.github.io/wfs-3-hackathon/)
+
 ### (add your own implementations)
 
 ...
