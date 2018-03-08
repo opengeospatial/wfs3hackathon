@@ -21,8 +21,8 @@ Tacos! Please enter your name and choice in the table below. Four is a normal or
 |Jivan||||4
 |Tom|1|1|1|1
 |Josh Fix|2|1|1|
-|name||||
-|name||||
+|Simon|||2|
+|Sai||||2
 |name||||
 |Matt Hanson|1|1|1|
 |name||||
