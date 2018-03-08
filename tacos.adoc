@@ -15,7 +15,7 @@ Tacos! Please enter your name and choice in the table below. Four is a normal or
 |name||||
 |name||||
 |name||||
-|Jivan|||4|
+|Jivan||||4
 |name||||
 |name||||
 |name||||
