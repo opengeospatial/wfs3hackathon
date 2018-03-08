@@ -20,7 +20,7 @@ Tacos! Please enter your name and choice in the table below. Four is a normal or
 |Jeff|2|2||
 |Jivan||||4
 |Tom|1|1|1|1
-|Josh Fix|1|1|1|
+|Josh Fix|2|1|1|
 |name||||
 |name||||
 |name||||
