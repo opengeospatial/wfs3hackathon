@@ -11,14 +11,14 @@ Tacos! Please enter your name and choice in the table below. Four is a normal or
 |Scott S.|2|2||
 |pvretano|1|1|1|1
 |Clemens|2|1|1|
-|name||||
-|name||||
-|name||||
-|name||||
+|Chris|1|1||2
+|Tim S|3|||
+|David||4||
+|Alex|2|2||
+|Ryan|2|2||
+|Tim|3|||
+|Jeff|2|2||
 |Jivan||||4
-|name||||
-|name||||
-|name||||
 |name||||
 |name||||
 |name||||
