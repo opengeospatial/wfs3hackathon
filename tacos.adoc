@@ -25,7 +25,7 @@ Tacos! Please enter your name and choice in the table below. Four is a normal or
 |Sai||||2
 |name||||
 |Matt Hanson|1|1|1|
-|name||||
+|Ahmed|||2|
 |name||||
 |name||||
 |Wes||2|2|
