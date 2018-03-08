@@ -28,7 +28,7 @@ Tacos! Please enter your name and choice in the table below. Four is a normal or
 |name||||
 |name||||
 |name||||
-|name||||
+|Wes||2|2|
 |name||||
 |name||||
 |name||||
