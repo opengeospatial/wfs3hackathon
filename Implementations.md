@@ -43,6 +43,13 @@ Running at:
 Running at:
 * http://geo.kralidis.ca/pygeoapi/
 
+### GeoServer
+
+An incomplete implementation of the WFS3 specification is available at http://cloudsdi.geo-solutions.it/geoserver/wfs3/ 
+It is a community module developed from scratch during the WFS 3 hackaton. 
+At the time of writing, still misses HTML outputs, conformance call, paging links (supports random paging with startIndex), 
+single feature outputs and attribute filtering.
+
 ### (add your own implementations)
 
 
