@@ -64,6 +64,13 @@ single feature outputs and attribute filtering.
 
 ### [An OpenLayers-based client](https://geekdenz.github.io/wfs-3-hackathon/)
 
+### WFS3 extension for OpenLayers integrated in a [linked data portal](http://demo.highlatitud.es)
+* [Example with www.ldproxy.nrw.de](http://demo.highlatitud.es/#/preview?url=https:~2F~2Fwww.ldproxy.nrw.de~2Fkataster~2Fapi~2F%3Ff%3Djson&ann=moz:13c69c6b-d813-407e-8f5b-3489ca0353b4&format=application~2Fvnd.ogc.wfs3)
+* [Example with cloudsdi.geo-solutions.it](http://demo.highlatitud.es/#/preview?url=http:~2F~2Fcloudsdi.geo-solutions.it~2Fgeoserver~2Fwfs3~2Fapi&ann=moz:f06b0eac-f5ca-44a9-8a88-b45912258c29&format=application~2Fvnd.ogc.wfs3)
+* [Example with wfs3hackathon.ldproxy.net](http://demo.highlatitud.es/#/mosaics/moz:e4c38da6-1b60-4e3e-a8cf-d207322dcd45/annot/moz:ab29e224-4e7b-4667-8fbe-ed63aeb57189?open=true)
+
+Extension code to be externalized as a reusable lib.
+
 ### (add your own implementations)
 
 ...
