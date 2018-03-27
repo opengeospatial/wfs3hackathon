@@ -1,3 +1,23 @@
+
+### Introductions
+
+The WFS3 Hackathon kicked off with a session for everyone to get on the same page of the spec and get to know one 
+another. Scott Simmons from OGC handled all the logistics for the event, and explained all the details about 
+meals and the venue. There were around 30 people in the room, with around 10 people participating remotely. The
+remote participants in Europe did an introduction in their morning and got started on work, but most also joined
+for this session.
+
+Peter Vretanos gave a welcome to everyone, explaining the goals and hopes for the event. It's meant to be developer 
+focused, with a goal for people to be sitting down and writing code. Chris Holmes gave an overview of the 
+SpatioTemporal Asset Catalog (STAC) work that started in a sprint that in many ways inspired the WFS3 event. A number
+of the participants were there for STAC. The goal was for day 1 to really focus on WFS3, to have everyone get up to
+speed with it. Day 2 would have a couple STAC specific sessions, including one on the potential for WFS3 and STAC API
+alignment. And Day 3 is the dedicated STAC day, that WFS 3 focused participants were also welcome to join.
+
+Clemens Portele then gave a deeper introduction to the WFS 3 specification and its goals. The WFS group had been 
+working on 
+
+
 This is raw notes dumped from http://board.net/p/wfs3-intros
 
 **TODO: Summarize and clean up formatting**
