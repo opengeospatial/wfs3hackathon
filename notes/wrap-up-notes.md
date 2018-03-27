@@ -1,7 +1,62 @@
+## Overview 
+
+This session was the last of the WFS 3 hackathon, with participants showing off all that they worked on. For those interested in diving in to all the details check out the [video](https://www.youtube.com/watch?v=FbH6TOwst7o) of the session.
+
+#### Golang
+
+Go proved to a popular language at the sprint, with two servers and one client. Jivan worked on [go-wfs](https://github.com/go-spatial/go-wfs/), getting most of the spec working and also making some issues to improve the WFS specification. Next steps are to explore a 'search' extension to do cross-collection searching. The Boundless team built a [go server](https://github.com/boundlessgeo/wfs3) focused on transactions. It targets AWS serverless deployment, running on Lambda, API Gateway and Aurora. On the client side Ian worked on a [go-wfs3-client](https://github.com/ischneider/go-wfs3-client) that could query servers and validate that they are working correctly. It works as a go library, but also a command line client.
+
+#### C
+
+Even built a [WFS 3.0 experimental driver](http://gdal.org/drv_wfs3.html) in GDAL, and got it working against a number of the services. The code is available [on github](https://github.com/OSGeo/gdal/blob/trunk/gdal/ogr/ogrsf_frmts/wfs/ogrwfs3driver.cpp). Peter evolved the Cubewerx server for several spec improvements, including some schema support.
+* [WFS 3.0 driver integration tests (Python)](https://github.com/OSGeo/gdal/blob/trunk/autotest/ogr/ogr_wfs3.py) (against a stubbed implemenation). And Ryan was able to implement WFS 3 on top of Pixia's catalog.
+
+#### Python
+
+The [pygeoapi](https://github.com/geopython/pygeoapi) team of Tom, Angelos, Norman, Matt and Jorge built a python WFS server from scratch, leveraging the swagger specification to generate bindings. It works with different providers - initially just csv and geojson, but is built to easily add other data sources. The team got the core working, and also explored transaction extensions, doing simple post / put. Samweli also worked on a QGIS plugin. 
+
+#### Java
+
+Andrea built a [WFS3 community module](https://github.com/geoserver/geoserver/tree/master/src/community/wfs3) for GeoServer, getting the basics working. He found the spec more manageable than previous WFS versions. Work on that will continue for OGC Testbed 14, and likely will push on extensions as many GeoServer users need things like different coordinate systems and transactions. Janne also worked on his Java server, refactoring it for the latest improvements in the specification.
+
+Clemens and his colleague also advanced [ldproxy](https://github.com/interactive-instruments/ldproxy) to implement the latest improvements to the specification.
+
+#### Javascript
+
+The Harris team evolved their node.js STAC implementation to also serve up satellite imagery as WFS 3, reaching a decent implementation in just hours. Tim S wrote a [wfs service](https://github.com/tschaub/wfs) to proxy other services and add
+CORS, since not all had it turned on, so that javascript clients could work with it. He then turned his attention to the server side, and built a prototype [node.js wfs](https://github.com/tschaub/pgfs) built on PostGIS. Ahmed also worked on a [WFS test client in node.js](https://github.com/ahmedOpeyemi/wfs3-test-client), that worked against the spec assertions, which proved to be a useful testing engine. 
+
+On the client side, Tim H wrote an [An OpenLayers-based client](https://geekdenz.github.io/wfs-3-hackathon/), and Philippe added WFS3 support to OpenLayers integrated in a [linked data portal](http://demo.highlatitud.es). Can see some cool demos of it working with servers worked on during the hackathon:
+
+* [Example with www.ldproxy.nrw.de](http://demo.highlatitud.es/#/preview?url=https:~2F~2Fwww.ldproxy.nrw.de~2Fkataster~2Fapi~2F%3Ff%3Djson&ann=moz:13c69c6b-d813-407e-8f5b-3489ca0353b4&format=application~2Fvnd.ogc.wfs3)
+* [Example with cloudsdi.geo-solutions.it](http://demo.highlatitud.es/#/preview?url=http:~2F~2Fcloudsdi.geo-solutions.it~2Fgeoserver~2Fwfs3~2Fapi&ann=moz:f06b0eac-f5ca-44a9-8a88-b45912258c29&format=application~2Fvnd.ogc.wfs3)
+* [Example with wfs3hackathon.ldproxy.net](http://demo.highlatitud.es/#/mosaics/moz:e4c38da6-1b60-4e3e-a8cf-d207322dcd45/annot/moz:ab29e224-4e7b-4667-8fbe-ed63aeb57189?open=true) 
+
+#### STAC
+
+A number of people worked more on STAC topics. Simon, David and Jeff were all working on static catalog topics. Michael and Tim from Harris worked with Josh from Boundless, Kasey and others on figuring out how to align STAC with WFS. And Matt Hanson, Michael, Chris, Simon, Alex and others also pushed forward on the EO profile for STAC.
+
+#### Testing
+
+Chuck investigated abstract tests for WFS, and how to test against OpenAPI, surveying other tools out there. And a few other tools also proved useful for testing, like Ahmed's node.js client, Ian's golang client, and Samweli's qgis work.
+
+### Conclusion
+
+Overall the event was a big success. There were more implementations created in a shorter time frame than imagined, which 
+speaks to the simplicity of the spec. Most everyone found it to be a refreshing improvement to the previous OGC specs they'd 
+worked with. Various links to the implementations are [listed here](../implementations.md). The specification also improved 
+substantially, with over 25 [issues](https://github.com/opengeospatial/WFS_FES/issues/) and pull requests filed, from the 
+minor tweaks that make a spec really consistent and usable to 
+[one major restructuring](https://github.com/opengeospatial/WFS_FES/issues/64) which will help with name collision 
+and just makes things more clear. Since then Clemens and Peter have done a great job closing those out and getting them 
+incorporated to the spec. Everyone also was quite excited to be involved early in the specification, giving feedback as its 
+being worked on instead of only getting to see it after the final release. Having everything on github makes it much easier
+for developers to get involved. And the in person interactions really helped to build a community of collaborators who will
+push things forward.
+
+## Raw Notes
+
 This is raw notes dumped from http://board.net/p/wfs3-wrapup
-
-**TODO: Clean up notes and write a summary**
-
 
 go-wfs / Jivan - go wfs connected with a few different clients, revealed some things about, cleaning those up. Restructuring from previous discussion. Next steps - finish up cleanup revealed by client. Help with one of those clients as a validator (since there are no tests), do some sort of validation. Want to implement the 'search' extension that we talked about with STAC group. Supporting geopackage now, want to support geopackage in the future. Also talking with static stac repos, that a static provider might be interesting to implement. 
 
@@ -50,7 +105,3 @@ Search - a WFS / search. And a /search/stac which would make assumptions about w
 TODO's: Open issue on transactions - Matt Perry / python, Michael Smith, Peter V and Josh Fix to all post their openapi and services there. 
 
 
---
-Collaborate seamlessly on documents! This pad text is synchronized as you type, so that everyone viewing this page sees the same text. 
-Create your own board and a (secret) name for it here: http://board.net This service is provided on fair-use with open source technology by fairkom. 
-Consider a donation in Euro or FairCoin https://www.fairkom.eu/en/sponsoring#Donations for disk space and new features. Virtual hug guaranteed! 
