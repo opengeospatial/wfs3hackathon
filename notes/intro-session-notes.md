@@ -24,7 +24,7 @@ testbed will enable more work on the spec and implementations for it.
 From there all participants gave introductions on where they were from and what brought them to the event. There were about 30 
 people from more than 20 organizations participating in Ft. Collins, with another 8 participants from a variety of 
 organizations online. Most had some experience with OGC specs, but not everyone, but very few regularly attended OGC meetings. 
-And the vast majority of participants were developers writing code most every day.
+And the vast majority of participants were developers writing code most every day. Full details of everyone there can be found in [introductions.md](introductions.md)
 
 
 ### Raw Notes
@@ -89,6 +89,8 @@ Latest version is up, with some fixes from Tim Schuab, made over the week. There
 Question - the spec is in draft, it's going to change in time. In these 2 days we will make clients. How do we know what changes happen? Is there a change log? Way to get notified? Github releases? Wanted to make a version this week. The document has a changelog, but it's at the end of the document. Can see all the changes, links to github issues / pull requests. 
 
 #### Participant introductions
+
+(cleaned up version is at [introductions.md](introductions.md))
 
 *Scott Simmons* - Standards lead of OGC, took over job in 2015, first thing took to board of directors is having implementor friendly standards. OGC procedures have ruled things. Very linear process to accept new standards. The rules are actually open, not as set as people thought. Have tried to do things as new as possible. WFS 3 is most out there attempt, not make a legal document, make something in api that people can code against it. Bring to Scott all opinions good / bad about the process - he has thick skin. Give Scott ideas. Scott will be in and out, but 
 
