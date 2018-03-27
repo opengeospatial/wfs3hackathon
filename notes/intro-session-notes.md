@@ -1,5 +1,5 @@
 
-### Introductions
+### Overview
 
 The WFS3 Hackathon kicked off with a session for everyone to get on the same page of the spec and get to know one 
 another. Scott Simmons from OGC handled all the logistics for the event, and explained all the details about 
@@ -9,15 +9,25 @@ for this session.
 
 Peter Vretanos gave a welcome to everyone, explaining the goals and hopes for the event. It's meant to be developer 
 focused, with a goal for people to be sitting down and writing code. Chris Holmes gave an overview of the 
-SpatioTemporal Asset Catalog (STAC) work that started in a sprint that in many ways inspired the WFS3 event. A number
+[SpatioTemporal Asset Catalog](http://github.com/radiantearth/stac-spec) (STAC) work that started in a sprint that in many ways inspired the WFS3 event. A number
 of the participants were there for STAC. The goal was for day 1 to really focus on WFS3, to have everyone get up to
 speed with it. Day 2 would have a couple STAC specific sessions, including one on the potential for WFS3 and STAC API
 alignment. And Day 3 is the dedicated STAC day, that WFS 3 focused participants were also welcome to join.
 
 Clemens Portele then gave a deeper introduction to the WFS 3 specification and its goals. The WFS group had been 
-working on 
+working on a WFS 2.5 that had a number of nice improvements, but decided to scrap that in favor of 'starting over' with a
+RESTful approach at the core, with JSON and HTML, and using the [Spatial Data on the Web Best Practices](https://www.w3.org/TR/sdw-bp/) as a guide. Clemens took people through the [overview](https://github.com/opengeospatial/WFS_FES/blob/master/overview.md) online, which summarizes most of what he talked about. Though most everything about how WFS works is changed
+they kept the name since the intent is to cover the same use cases. The hope is that the spec can be used more portably, 
+allowing implementors to just use specific pieces for what they want. The spec will continue to evolve and the next OGC 
+testbed will enable more work on the spec and implementations for it.
+
+From there all participants gave introductions on where they were from and what brought them to the event. There were about 30 
+people from more than 20 organizations participating in Ft. Collins, with another 8 participants from a variety of 
+organizations online. Most had some experience with OGC specs, but not everyone, but very few regularly attended OGC meetings. 
+And the vast majority of participants were developers writing code most every day.
 
 
+### Raw Notes
 This is raw notes dumped from http://board.net/p/wfs3-intros
 
 **TODO: Summarize and clean up formatting**
@@ -55,7 +65,18 @@ Same thing is true with OpenAPI. Draft version we have now says you have to have
 
 *Security* - Was a practical issue with WFS and other standards - security has been an afterthought. We've not yet spent a lot of time thinking about it. Hoping that OpenAPI will give us that. But we need to spend more time and experimentation on.
 
-These are main drivers. But we keep the name WFS 3.0 for now because we want to support the same use cases. Make it easier for others to work with it. Hope is you can develop a generic WFS client that can talk to multiple of the WFS's that implement that spec. But also hope (and a question) of how can someone hit a data api that implements this but doesn't have to read the WFS spec just to get data. May read user guide, but it shouldn't be big hurdle in the beginning. Make it work in a development environment. Make it work in the OGC development process. Have been active in the last month, november to now, in improving the core spec. Hope to get something more or less 'good' out this month, with input from work at wfs hackathon. Do have some experience, some implementations - have been working for more than a year. Once we have that draft will go through the regular OGC standardization process, with internal reviews by architecture board, public request for comments. Sufficient implementation & evidence feedback. Will try to do test engines before final stamp. Goal is to have the tooling available before we put the stamp on it. Includes test engines, and other tools with a broader perspective. Is a slight change in the OGC process. It's been that when the group has worked for awhile they'd move as quickly as possible through the standardization process. 
+These are main drivers. But we keep the name WFS 3.0 for now because we want to support the same use cases. Make it easier for 
+others to work with it. Hope is you can develop a generic WFS client that can talk to multiple of the WFS's that implement 
+that spec. But also hope (and a question) of how can someone hit a data api that implements this but doesn't have to read the 
+WFS spec just to get data. May read user guide, but it shouldn't be big hurdle in the beginning. Make it work in a development 
+environment. Make it work in the OGC development process. Have been active in the last month, november to now, in improving 
+the core spec. Hope to get something more or less 'good' out this month, with input from work at wfs hackathon. Do have some 
+experience, some implementations - have been working for more than a year. Once we have that draft will go through the regular 
+OGC standardization process, with internal reviews by architecture board, public request for comments. Sufficient 
+implementation & evidence feedback. Will try to do test engines before final stamp. Goal is to have the tooling available 
+before we put the stamp on it. Includes test engines, and other tools with a broader perspective. Is a slight change in the 
+OGC process. It's been that when the group has worked for awhile they'd move as quickly as possible through the 
+standardization process. 
 
 Not just the OGC process. ISO also wants to make the next version an ISO standard. 
 
@@ -67,7 +88,7 @@ Latest version is up, with some fixes from Tim Schuab, made over the week. There
 
 Question - the spec is in draft, it's going to change in time. In these 2 days we will make clients. How do we know what changes happen? Is there a change log? Way to get notified? Github releases? Wanted to make a version this week. The document has a changelog, but it's at the end of the document. Can see all the changes, links to github issues / pull requests. 
 
-=== Participant introductions
+#### Participant introductions
 
 *Scott Simmons* - Standards lead of OGC, took over job in 2015, first thing took to board of directors is having implementor friendly standards. OGC procedures have ruled things. Very linear process to accept new standards. The rules are actually open, not as set as people thought. Have tried to do things as new as possible. WFS 3 is most out there attempt, not make a legal document, make something in api that people can code against it. Bring to Scott all opinions good / bad about the process - he has thick skin. Give Scott ideas. Scott will be in and out, but 
 
